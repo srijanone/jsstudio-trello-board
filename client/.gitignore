@@ -2,6 +2,7 @@
 docker-compose.override.yml
 # compiled output
 /tmp
+build
 .env
 node_modules
 /lib

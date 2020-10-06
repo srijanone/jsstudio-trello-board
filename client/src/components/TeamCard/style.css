@@ -1,0 +1,81 @@
+.tile.teamTile {
+    height: 165px;
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.tile .teamName {
+    text-align: center;
+}
+
+.tile .dataWrapper {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px 10px;
+}
+
+.tile .dataWrapper .label {
+    width: 150px;
+    margin-bottom: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.tile .dataWrapper .bold {
+    font-weight: 800;
+}
+
+.tile .dataWrapper .progressBar {
+    width: calc(100% - 200px);
+}
+
+.tile .dataWrapper .value {
+    width: 50px;
+    text-align: right;
+}
+
+.tile .infoIconCredit {
+    width: 15px;
+    display: inline-block;
+    border: 1px solid #fff;
+    text-align: center;
+    font-family: serif;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 3px;
+}
+
+.tile .tooltip {
+    position: absolute;
+    background: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    height: 40px;
+    width: 250px;
+    padding: 10px;
+    z-index: 1;
+    left: 60px;
+    bottom: 25px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+    color: #000;
+}
+
+.tile .caret{
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #ccc;
+    position: absolute;
+    bottom: -7px;
+    left: 2px;
+  }
+
+.tile .tooltip.hide {
+    display: none;
+}

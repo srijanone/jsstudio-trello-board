@@ -1,0 +1,13 @@
+.dashboard{
+    border: 1px solid blue;
+    background-color: rgba(65,106,217,1);
+}
+.showmore {
+    background-color: #fff;
+    border: navajowhite;
+}
+.read-more {
+    position: absolute;
+    top: 240px;
+    margin-left: 222px;
+}

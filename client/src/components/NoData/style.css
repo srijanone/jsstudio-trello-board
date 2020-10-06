@@ -1,0 +1,9 @@
+.NoData {
+  display: inline-block;
+  position: absolute;
+  width: 164px;
+  top: calc(50% - 11px);
+  left: calc(50% - 82px);
+  font-size: 20px;
+  font-weight: 600;
+}
