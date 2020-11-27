@@ -9,3 +9,4 @@ script:
 
 after_success:
   - npm pack
+  - npm publish --access public 

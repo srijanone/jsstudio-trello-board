@@ -1,7 +1,7 @@
 {
 	"name": "trello-board",
 	"types": "lib/cjs/index.d.ts",
-	"version": "1.0.1",
+	"version": "1.0.4",
 	"description": "trello-board-server",
 	"main": "./lib/cjs/index.js",
 	"bin": {

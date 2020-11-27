@@ -28,7 +28,7 @@ open browser on port 8089
 ```
 ### Application on PORT 8089
 
-![alt text](./screens/sample.png "Title")
+![alt text](./screens/sample.png "Trello UI")
 
 
 
