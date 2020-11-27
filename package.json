@@ -4,13 +4,11 @@
 	"version": "1.0.1",
 	"description": "trello-board-server",
 	"main": "./lib/cjs/index.js",
-	"module": "./lib/esm/index.js",
 	"bin": {
-		"jsstudio-trello": "./lib/cjs/bin.js"
+		"trello-board": "./lib/cjs/bin.js"
 	},
 	"scripts": {
-		"prebuild": "cd client && npm run build",
-		"build": "tsc -p tsconfig.json && tsc -p tsconfig-esm.json && cp -r ./client/build ./lib/cjs/ && cp -r ./client/build ./lib/esm/",
+		"build": "tsc -p tsconfig.json && && cp -r ./client/build ./lib/cjs/",
 		"build:watch": "tsc -w",
 		"start": "nodemon",
 		"test": "ENV=test nyc mocha -r ts-node/register -r dotenv/config 'test/**/*.spec.ts' --exit",
@@ -25,7 +23,7 @@
 	],
 	"repository": {
 		"url": "git@github.com:srijanone/jsstudio-trello-board.git"
-	  },
+	},
 	"author": "Srijan Technologies Pvt Ltd",
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/"
@@ -103,6 +101,7 @@
 		"lib/**/*.html",
 		"lib/**/*.json",
 		"lib/**/*.ico",
+		"lib/**/*.css",
 		"lib/**/*.png",
 		"lib/**/*.txt",
 		"lib/**/*.js.map"
