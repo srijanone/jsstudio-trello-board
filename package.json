@@ -5,8 +5,12 @@
 	"description": "trello-board-server",
 	"main": "./lib/cjs/index.js",
 	"module": "./lib/esm/index.js",
+	"bin": {
+		"jsstudio-trello": "./lib/cjs/bin.js"
+	},
 	"scripts": {
-		"build": "tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
+		"prebuild": "cd client && npm run build",
+		"build": "tsc -p tsconfig.json && tsc -p tsconfig-esm.json && cp -r ./client/build ./lib/cjs/ && cp -r ./client/build ./lib/esm/",
 		"build:watch": "tsc -w",
 		"start": "nodemon",
 		"test": "ENV=test nyc mocha -r ts-node/register -r dotenv/config 'test/**/*.spec.ts' --exit",
@@ -15,9 +19,14 @@
 		"lint:fix": "./node_modules/.bin/tslint --project ./tsconfig.json -e 'test/**/*.*'  --fix"
 	},
 	"keywords": [
-		"react-mock",
-		"mock-api"
+		"trello",
+		"trello dashboard",
+		"trello server"
 	],
+	"repository": {
+		"url": "git@github.com:srijanone/jsstudio-trello-board.git"
+	  },
+	"author": "Srijan Technologies Pvt Ltd",
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/"
 	},
@@ -52,7 +61,6 @@
 	"dependencies": {
 		"axios": "^0.19.2",
 		"body-parser": "^1.19.0",
-		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
 		"express-winston": "^4.0.5",
 		"nodemon": "^2.0.1",
@@ -60,7 +68,8 @@
 		"strong-params": "^1.0.0",
 		"tslint-sonarts": "^1.9.0",
 		"typescript": "^3.8.3",
-		"winston": "^3.3.3"
+		"winston": "^3.3.3",
+		"yargs": "^16.1.1"
 	},
 	"devDependencies": {
 		"@istanbuljs/nyc-config-typescript": "^0.1.3",
@@ -72,6 +81,7 @@
 		"@types/morgan": "^1.7.37",
 		"@types/node": "^12.12.29",
 		"@types/validator": "^12.0.1",
+		"@types/yargs": "^15.0.10",
 		"chai": "^4.2.0",
 		"chai-as-promised": "^7.1.1",
 		"chai-http": "^4.3.0",
@@ -90,6 +100,11 @@
 		"lib/**/*.d.ts",
 		"lib/**/*.json",
 		"lib/**/*.js",
+		"lib/**/*.html",
+		"lib/**/*.json",
+		"lib/**/*.ico",
+		"lib/**/*.png",
+		"lib/**/*.txt",
 		"lib/**/*.js.map"
 	]
 }

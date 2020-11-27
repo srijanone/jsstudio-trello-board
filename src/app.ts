@@ -12,10 +12,9 @@ const logger = new Logger();
 app.use(bodyParser.json({ limit: '50mb', type: 'application/json' }));
 app.use(params.expressMiddleware());
 app.use(logger.getRequestLogger());
-app.use(express.static(path.join(__dirname, "..", "client/build")));
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/build'));
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 app.use('/api', Routes);
 app.get('/health', (req, res) => res.json({ status: true, message: 'Health OK!' }));

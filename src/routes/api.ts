@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import APIController from '../app/controllers/ApiController';
+import APIController from '../app/controllers/api-controller';
 const router = Router();
 
 // Due to Time issue i am just creating some mock apis
