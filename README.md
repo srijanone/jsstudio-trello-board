@@ -8,6 +8,11 @@
 - This is Trello board application which will expose your trello-board data in different charts and will help you to check data for different projects
 - Trello-board has nice visualization of charts to show data from trello-apis to visualization charts for mltiple projects in oraganization
 
+### Trello Platform (Trello developer account)
+
+Tou can get Trello api key and token from https://trello.com/app-key and same for token you can access by passing key here 
+- https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&name=Server%20Token&key=XXXXXXXXXXXXXX
+
 ### Installation 
 
 ```
